@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function Container({ addons, children }) {
   return (
     <div
-      className={`p-3 ${addons} mx-auto bg-slate-100 rounded-lg shadow-md mb-5`}
+      className={`p-3 border-box mx-auto bg-slate-100 rounded-lg shadow-md mb-5 ${addons}`}
     >
       {children}
     </div>
