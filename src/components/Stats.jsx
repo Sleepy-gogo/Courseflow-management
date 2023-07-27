@@ -17,8 +17,8 @@ function Stats() {
       <div className="text-center">
         <h2 className="font-bold text-lg sm:text-2xl">Estás viendo: X</h2>
         <p className="text-md sm:text-xl font-semibold">
-          Próximo integrador en: <span className="text-purple-600">X</span>{" "}
-          encuentros <span className="text-slate-500">(Encuentro X)</span>
+          Integrador en: <span className="text-purple-600">X</span> encuentros{" "}
+          <span className="text-slate-500">(Encuentro X)</span>
           <br />
           ¡Asegurate de prepararte bien!
         </p>
