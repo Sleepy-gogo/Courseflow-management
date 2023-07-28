@@ -1,10 +1,11 @@
-import { useState } from "react";
 import Stats from "./components/Stats";
 import LessonList from "./components/LessonList";
 import Container from "./components/Container";
 
+import useStoragedState from "./hooks/useStoragedState";
+
 function App() {
-  const [encuentros, setEncuentros] = useState(1);
+  const [encuentros, setEncuentros] = useStoragedState("encuentros", 1);
 
   return (
     <div className="bg-gradient-to-br from-cyan-400 to-blue-800 min-h-screen h-full p-3 md:p-10">
