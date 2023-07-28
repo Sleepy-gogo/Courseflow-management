@@ -8,12 +8,9 @@ function getProgressData(encounter, lesson) {
   const [inicio, final] = lesson.length;
   const [progreso, progresoFinal] = [encounter - inicio, final - inicio];
   data.completed = encounter >= final;
+  const percentage = (progreso * 100) / progresoFinal;
   data.percentage =
-    encounter < inicio
-      ? 0
-      : data.completed
-      ? 100
-      : (progreso * 100) / progresoFinal;
+    encounter < inicio ? 0 : data.completed ? 100 : +percentage.toFixed(1);
   data.current = encounter >= inicio && encounter <= final;
   return data;
 }
