@@ -26,7 +26,7 @@ function Lesson({ lesson, progress }) {
           </p>
         </div>
       </div>
-      <div className="w-100 mt-2 ml-auto w-full overflow-x-hidden">
+      <div className="w-100 mt-2 ml-auto w-full h-7 overflow-hidden">
         <ProgressBar
           completed={percentage}
           barContainerClassName="bg-slate-200 rounded shadow"
