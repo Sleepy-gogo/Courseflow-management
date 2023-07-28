@@ -1,3 +1,5 @@
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import PropTypes from "prop-types";
 import Container from "./Container";
 import Counter from "./Counter";
@@ -5,6 +7,11 @@ import useStudentInfo from "../hooks/useStudentInfo";
 
 function getRemainingEncounters(integradorLength, encuentro) {
   return integradorLength ? integradorLength[0] - encuentro : "...";
+}
+
+function getPercentage(total, progress) {
+  const rawPercentage = (progress * 100) / total;
+  return +rawPercentage.toFixed(2);
 }
 
 function Stats({ encuentros, setEncuentros }) {
@@ -16,8 +23,19 @@ function Stats({ encuentros, setEncuentros }) {
         <h2 className="font-bold text-lg sm:text-2xl">Número de encuentro</h2>
         <Counter state={encuentros} setState={setEncuentros} />
       </div>
-      <div className="h-52 w-52 sm:h-80 sm:w-80 bg-red-200 grid place-items-center">
-        <p>To do: Add donut graph</p>
+      <div className="h-52 w-52 sm:h-80 sm:w-80 sm:p-5 grid place-items-center">
+        <CircularProgressbar
+          value={getPercentage(161, encuentros)}
+          styles={buildStyles({
+            pathTransitionDuration: 1.2,
+            pathColor: "#3b82f6",
+            trailColor: "#d4e4fb",
+            textColor: "#3b82f6",
+            strokeLinecap: "butt",
+            textSize: "9px",
+          })}
+          text={`${getPercentage(161, encuentros)}% avanzado!`}
+        />
       </div>
       <div className="text-center">
         <h2 className="font-bold text-lg sm:text-2xl">

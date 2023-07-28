@@ -1,3 +1,4 @@
+import ProgressBar from "@ramonak/react-progress-bar";
 import Container from "./Container";
 import PropTypes from "prop-types";
 
@@ -25,10 +26,12 @@ function Lesson({ lesson, progress }) {
           </p>
         </div>
       </div>
-      <div className="bg-green-400 w-100 mt-2 ml-auto w-full">
-        <p className="text-center text-sm sm:text-md font-bold text-slate-800">
-          To do: Progress bar {percentage}
-        </p>
+      <div className="w-100 mt-2 ml-auto w-full">
+        <ProgressBar
+          completed={percentage}
+          barContainerClassName="bg-slate-200 rounded shadow"
+          bgColor="#22c55e"
+        />
       </div>
     </Container>
   );

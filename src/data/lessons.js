@@ -85,12 +85,12 @@ const lessons = [{
   },
   {
     id: 18,
-    name: 'Integrador',
+    name: 'Integrador Java+MySQL+JDBC+JPA',
     length: [87, 87]
   },
   {
     id: 19,
-    name: 'HTML',
+    name: 'HTML & CSS',
     length: [88, 96]
   },
   {
