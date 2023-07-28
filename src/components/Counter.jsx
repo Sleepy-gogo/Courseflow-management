@@ -5,10 +5,10 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
-const MAX_ENCUENTROS = 168;
+const MAX_ENCUENTROS = 160;
 
 function validateNumber(n) {
-  if (n < 0) return 0;
+  if (n < 1) return 1;
   if (n > MAX_ENCUENTROS) return MAX_ENCUENTROS;
   return n;
 }

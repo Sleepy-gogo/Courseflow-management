@@ -1,10 +1,8 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 import Container from "./Container";
 import Counter from "./Counter";
 
-function Stats() {
-  const [encuentros, setEncuentros] = useState(0);
-
+function Stats({ encuentros, setEncuentros }) {
   return (
     <Container addons="flex flex-col justify-center items-center gap-5 p-5">
       <div className="grid place-items-center gap-2">
@@ -26,5 +24,10 @@ function Stats() {
     </Container>
   );
 }
+
+Stats.propTypes = {
+  encuentros: PropTypes.number.isRequired,
+  setEncuentros: PropTypes.func.isRequired,
+};
 
 export default Stats;

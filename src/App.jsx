@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Stats from "./components/Stats";
 import LessonList from "./components/LessonList";
 import Container from "./components/Container";
 
 function App() {
+  const [encuentros, setEncuentros] = useState(1);
+
   return (
     <div className="bg-gradient-to-br from-cyan-400 to-blue-800 min-h-screen h-full p-3 md:p-10">
       <header>
@@ -16,8 +19,8 @@ function App() {
         className="flex flex-col-reverse gap-4 justify-end items-center lg:flex-row max-w-screen-lg mx-auto"
         style={{ minHeight: "80vh" }}
       >
-        <LessonList />
-        <Stats />
+        <LessonList encuentros={encuentros} />
+        <Stats encuentros={encuentros} setEncuentros={setEncuentros} />
       </main>
     </div>
   );
