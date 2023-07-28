@@ -14,6 +14,7 @@ function getProgressData(encounter, lesson) {
       : data.completed
       ? 100
       : (progreso * 100) / progresoFinal;
+  data.current = encounter >= inicio && encounter <= final;
   return data;
 }
 
@@ -23,7 +24,10 @@ function LessonList({ encuentros }) {
       <h1 className="text-center font-bold text-lg sm:text-2xl mb-3">
         Lista de lecciones
       </h1>
-      <div className="overflow-auto" style={{ maxHeight: "60vh" }}>
+      <div
+        className="overflow-auto scroll-pt-7 scroll-smooth"
+        style={{ maxHeight: "60vh" }}
+      >
         {lessons &&
           lessons.map((lesson) => (
             <Lesson

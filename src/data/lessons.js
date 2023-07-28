@@ -45,88 +45,93 @@ const lessons = [{
   },
   {
     id: 10,
-    name: 'Colecciones',
-    length: [33, 41]
+    name: 'Integrador Java',
+    length: [33, 33]
   },
   {
     id: 11,
-    name: 'Relaciones entre clases',
-    length: [42, 50]
+    name: 'Colecciones',
+    length: [34, 42]
   },
   {
     id: 12,
-    name: 'Herencia',
-    length: [51, 59]
+    name: 'Relaciones entre clases',
+    length: [43, 51]
   },
   {
     id: 13,
-    name: 'Excepciones',
-    length: [60, 62]
+    name: 'Herencia',
+    length: [52, 60]
   },
   {
     id: 14,
-    name: 'MySQL',
-    length: [63, 71]
+    name: 'Excepciones',
+    length: [61, 63]
   },
   {
     id: 15,
-    name: 'JDBC',
-    length: [72, 75]
+    name: 'MySQL',
+    length: [64, 72]
   },
   {
     id: 16,
-    name: 'JPA',
-    length: [76, 85]
+    name: 'JDBC',
+    length: [73, 76]
   },
   {
     id: 17,
-    name: 'Integrador',
-    length: [86, 86]
+    name: 'JPA',
+    length: [77, 86]
   },
   {
     id: 18,
-    name: 'HTML',
-    length: [87, 95]
+    name: 'Integrador',
+    length: [87, 87]
   },
   {
     id: 19,
-    name: 'JavaScript',
-    length: [96, 107]
+    name: 'HTML',
+    length: [88, 96]
   },
   {
     id: 20,
-    name: 'React',
-    length: [108, 118]
+    name: 'JavaScript',
+    length: [97, 108]
   },
   {
     id: 21,
-    name: 'Integrador',
-    length: [119, 119]
+    name: 'React',
+    length: [109, 119]
   },
   {
     id: 22,
-    name: 'Spring 1',
-    length: [120, 131]
+    name: 'Integrador',
+    length: [120, 120]
   },
   {
     id: 23,
-    name: 'Buenas practicas de Java',
-    length: [132, 132]
+    name: 'Spring 1',
+    length: [121, 132]
   },
   {
     id: 24,
-    name: 'Spring 2',
-    length: [133, 158]
+    name: 'Buenas practicas de Java',
+    length: [133, 133]
   },
   {
     id: 25,
-    name: 'Repaso',
-    length: [159, 159]
+    name: 'Spring 2',
+    length: [134, 159]
   },
   {
     id: 26,
-    name: 'Integrador final',
+    name: 'Repaso',
     length: [160, 160]
+  },
+  {
+    id: 27,
+    name: 'Integrador final',
+    length: [161, 161]
   }
 ];
 

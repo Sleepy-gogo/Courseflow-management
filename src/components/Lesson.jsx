@@ -3,11 +3,13 @@ import PropTypes from "prop-types";
 
 function Lesson({ lesson, progress }) {
   const { name, length } = lesson;
-  const { completed, percentage } = progress;
+  const { completed, percentage, current } = progress;
+
+  const active = current ? "border-solid border-2 border-blue-400" : "";
 
   return (
-    <Container addons="bg-white px-4 w-full">
-      <div className="flex items-center gap-4">
+    <Container addons={`bg-white px-4 w-full ${active}`}>
+      <div className="flex items-center gap-4" id={current ? "current" : ""}>
         <input
           type="checkbox"
           checked={completed}
@@ -23,7 +25,7 @@ function Lesson({ lesson, progress }) {
           </p>
         </div>
       </div>
-      <div className="bg-green-400 w-100 mt-2 ml-auto max-w-lg">
+      <div className="bg-green-400 w-100 mt-2 ml-auto w-full">
         <p className="text-center text-sm sm:text-md font-bold text-slate-800">
           To do: Progress bar {percentage}
         </p>
@@ -40,6 +42,7 @@ Lesson.propTypes = {
   progress: PropTypes.shape({
     completed: PropTypes.bool.isRequired,
     percentage: PropTypes.number.isRequired,
+    current: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
