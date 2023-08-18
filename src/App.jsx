@@ -15,7 +15,7 @@ function App() {
       }}
     >
       <nav>
-        <Container addons="sm:h-full h-14 sm:w-20 w-full rounded-none sticky sm:fixed py-1 sm:py-2 px-3 flex justify-between sm:flex-col">
+        <Container addons="sm:h-full h-14 sm:w-16 w-full rounded-none sticky sm:fixed py-1 sm:py-10 px-3 flex justify-between sm:flex-col">
           <div className="flex items-center gap-2">
             <img
               src={eggIcon}
