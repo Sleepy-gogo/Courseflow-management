@@ -18,12 +18,12 @@ function Stats({ encuentros, setEncuentros }) {
   const [lesson, integrador] = useStudentInfo({ encuentro: encuentros });
 
   return (
-    <Container addons="flex flex-col justify-center items-center gap-5 p-5 sm:w-full">
+    <Container addons="flex flex-col justify-center items-center gap-5 p-5 lg:max-w-[40%] w-11/12 md:w-full">
       <div className="grid place-items-center gap-2">
         <h2 className="font-bold text-lg sm:text-2xl">Número de encuentro</h2>
         <Counter state={encuentros} setState={setEncuentros} />
       </div>
-      <div className="h-52 w-52 sm:h-80 sm:w-80 sm:p-5 grid place-items-center">
+      <div className="h-52 w-52 sm:h-72 sm:w-72 sm:p-5 grid place-items-center">
         <CircularProgressbar
           value={getPercentage(161, encuentros)}
           styles={buildStyles({
