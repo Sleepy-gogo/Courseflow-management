@@ -3,6 +3,7 @@ import LessonList from "./components/LessonList";
 import Container from "./components/Container";
 import backgroundImage from "./assets/egg_background.jpg";
 import eggIcon from "../public/egg_icon.svg";
+import userPlaceholderIcon from "assets/user_placeholder.jpeg";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
             </h1>
           </div>
           <button className="rounded-full overflow-hidden bg-blue-100 aspect-square sm:w-full">
-            <img src="src/assets/user_placeholder.jpeg" alt="" />
+            <img src={userPlaceholderIcon} alt="" />
           </button>
         </Container>
       </nav>
