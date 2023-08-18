@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { EncuentroContext } from "../context/encuentroProvider";
+import { EncuentroContext } from "../context/EncuentroProvider";
 
 function useEncuentros() {
   const context = useContext(EncuentroContext);

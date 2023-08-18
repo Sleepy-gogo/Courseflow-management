@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import EncuentroProvider from "./context/encuentroProvider.jsx";
+import EncuentroProvider from "./context/EncuentroProvider.jsx";
 import App from "./App.jsx";
 import "./index.css";
 
