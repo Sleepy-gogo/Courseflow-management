@@ -1,9 +1,9 @@
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import PropTypes from "prop-types";
 import Container from "./Container";
 import Counter from "./Counter";
 import useStudentInfo from "../hooks/useStudentInfo";
+import useEncuentros from "../hooks/useEncuentro";
 
 function getRemainingEncounters(integradorLength, encuentro) {
   return integradorLength ? integradorLength[0] - encuentro : "...";
@@ -14,7 +14,8 @@ function getPercentage(total, progress) {
   return +rawPercentage.toFixed(2);
 }
 
-function Stats({ encuentros, setEncuentros }) {
+function Stats() {
+  const { encuentros, setEncuentros } = useEncuentros();
   const [lesson, integrador] = useStudentInfo({ encuentro: encuentros });
 
   return (
@@ -63,10 +64,5 @@ function Stats({ encuentros, setEncuentros }) {
     </Container>
   );
 }
-
-Stats.propTypes = {
-  encuentros: PropTypes.number.isRequired,
-  setEncuentros: PropTypes.func.isRequired,
-};
 
 export default Stats;

@@ -4,11 +4,7 @@ import Container from "./components/Container";
 import backgroundImage from "./assets/egg_background.jpg";
 import eggIcon from "../public/egg_icon.svg";
 
-import useStoragedState from "./hooks/useStoragedState";
-
 function App() {
-  const [encuentros, setEncuentros] = useStoragedState("encuentros", 1);
-
   return (
     <div
       className="bg-gradient-to-br from-cyan-400 to-blue-800 min-h-screen flex flex-col lg:h-screen"
@@ -30,8 +26,8 @@ function App() {
         </Container>
       </nav>
       <main className="flex flex-col gap-4 justify-end items-center lg:flex-row max-w-screen-2xl mx-auto md:px-20 lg:py-14 min-h-screen">
-        <Stats encuentros={encuentros} setEncuentros={setEncuentros} />
-        <LessonList encuentros={encuentros} />
+        <Stats />
+        <LessonList />
       </main>
     </div>
   );
