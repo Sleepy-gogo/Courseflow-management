@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import lessons from "../data/lessons";
+import useLessonsData from "./useLessonsData";
 import { useEffect, useState } from "react";
 
-function getCurrentLesson(encuentro) {
+function getCurrentLesson(encuentro, lessons) {
   const lesson = lessons.find((lesson) => lesson.length[1] > encuentro);
   return lessons[lessons.indexOf(lesson)];
 }
 
-function getCurrentIntegrador(encuentro) {
+function getCurrentIntegrador(encuentro, lessons) {
   const regex = /^Integrador/;
   const integradorIndex = lessons.findIndex(
     (lesson) => regex.test(lesson.name) && lesson.length[1] > encuentro
@@ -16,12 +16,13 @@ function getCurrentIntegrador(encuentro) {
 }
 
 function useStudentInfo({ encuentro }) {
+  const { lessons } = useLessonsData();
   const [lesson, setLesson] = useState({});
   const [integrador, setIntegrador] = useState({});
 
   function updateStates() {
-    setLesson(getCurrentLesson(encuentro));
-    setIntegrador(getCurrentIntegrador(encuentro));
+    setLesson(getCurrentLesson(encuentro, lessons));
+    setIntegrador(getCurrentIntegrador(encuentro, lessons));
   }
 
   useEffect(() => {
@@ -32,7 +33,7 @@ function useStudentInfo({ encuentro }) {
     updateStates();
   }, []);
 
-  return [lesson, integrador];
+  return { lesson, integrador };
 }
 
 export default useStudentInfo;

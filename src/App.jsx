@@ -31,7 +31,7 @@ function App() {
           </button>
         </Container>
       </nav>
-      <main className="flex flex-col gap-4 justify-end items-center lg:flex-row max-w-screen-2xl mx-auto md:px-20 lg:py-14 min-h-screen">
+      <main className="flex flex-col gap-4 justify-end items-center lg:flex-row max-w-screen-2xl mx-auto sm:pl-28 sm:pr-5 lg:py-14 min-h-screen">
         <Stats />
         <LessonList />
       </main>
