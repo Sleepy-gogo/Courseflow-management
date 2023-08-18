@@ -41,10 +41,16 @@ function Stats() {
         </div>
       </div>
       <div className="text-center">
-        <h2 className="font-bold text-lg sm:text-2xl">Estás viendo:</h2>
-        <div className="bg-slate-200 transition-colors font-bold text-lg sm:text-2xl text-blue-500 hover:bg-slate-300 inline px-3 rounded-full">
-          <a href="#current">{lesson ? lesson.name : "..."}</a>
-        </div>
+        <h2 className="font-bold text-lg sm:text-2xl">
+          Estás viendo:
+          <br />
+          <a
+            href="#current"
+            className="transition-colors text-blue-500 hover:text-blue-300 "
+          >
+            {lesson ? lesson.name : "..."}
+          </a>
+        </h2>
         <p className="text-md sm:text-xl font-semibold">
           Integrador en:{" "}
           <span className="text-blue-500 font-bold">
