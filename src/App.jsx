@@ -15,14 +15,20 @@ function App() {
       }}
     >
       <nav>
-        <Container addons="sm:h-full h-14 sm:w-14 w-full rounded-none sticky sm:fixed p-2 px-3 flex justify-between sm:flex-col">
-          <a href="" className="flex items-center gap-2">
-            <img src={eggIcon} alt="Egg icon" className="h-full w-10" />
+        <Container addons="sm:h-full h-14 sm:w-20 w-full rounded-none sticky sm:fixed py-1 sm:py-2 px-3 flex justify-between sm:flex-col">
+          <div className="flex items-center gap-2">
+            <img
+              src={eggIcon}
+              alt="Egg icon"
+              className="h-full sm:w-full aspect-square"
+            />
             <h1 className="font-bold text-xl text-blue-950 mobile-only">
               <span className="text-blue-500">Egg</span> Progress
             </h1>
-          </a>
-          <button className="rounded-full bg-blue-100 h-8 w-8">A</button>
+          </div>
+          <button className="rounded-full overflow-hidden bg-blue-100 aspect-square sm:w-full">
+            <img src="src/assets/user_placeholder.jpeg" alt="" />
+          </button>
         </Container>
       </nav>
       <main className="flex flex-col gap-4 justify-end items-center lg:flex-row max-w-screen-2xl mx-auto md:px-20 lg:py-14 min-h-screen">
