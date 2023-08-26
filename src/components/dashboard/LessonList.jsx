@@ -1,7 +1,7 @@
-import Container from "./Container";
+import Container from "../Container";
 import Lesson from "./Lesson";
-import lessons from "../data/lessons.js";
-import useEncuentros from "../hooks/useEncuentro";
+import useEncuentros from "../../hooks/useEncuentro";
+import useLessonsData from "../../hooks/useLessonsData";
 
 function getProgressData(encounter, lesson) {
   const data = {};
@@ -17,8 +17,9 @@ function getProgressData(encounter, lesson) {
 
 function LessonList() {
   const { encuentros } = useEncuentros();
+  const { lessons } = useLessonsData();
   return (
-    <Container addons="w-11/12 md:w-full h-[55vh] lg:h-full">
+    <Container className="w-11/12 md:w-full h-[55vh] lg:h-full">
       <h1 className="text-center font-bold text-lg sm:text-2xl mb-3">
         Lista de lecciones
       </h1>

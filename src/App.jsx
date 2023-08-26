@@ -1,5 +1,5 @@
-import Stats from "./components/Stats";
-import LessonList from "./components/LessonList";
+import Stats from "./components/dashboard/Stats";
+import LessonList from "./components/dashboard/LessonList";
 import Container from "./components/Container";
 import backgroundImage from "./assets/egg_background.jpg";
 import eggIcon from "../public/egg_icon.svg";
@@ -16,17 +16,12 @@ function App() {
       }}
     >
       <nav>
-        <Container addons="sm:h-full h-14 sm:w-16 w-full rounded-none sticky sm:fixed py-1 sm:py-10 px-3 flex justify-between sm:flex-col">
-          <div className="flex items-center gap-2">
-            <img
-              src={eggIcon}
-              alt="Egg icon"
-              className="h-full sm:w-full aspect-square"
-            />
-            <h1 className="font-bold text-xl text-blue-950 mobile-only">
-              <span className="text-blue-500">Egg</span> Progress
-            </h1>
-          </div>
+        <Container className="sm:h-full h-14 sm:w-16 w-full rounded-none sticky sm:fixed py-1 sm:py-10 px-3 flex justify-between sm:flex-col">
+          <img
+            src={eggIcon}
+            alt="Egg icon"
+            className="h-full sm:h-fit sm:w-full aspect-square"
+          />
           <button className="rounded-full overflow-hidden bg-blue-100 aspect-square sm:w-full">
             <img src={userPlaceholderIcon} alt="" />
           </button>

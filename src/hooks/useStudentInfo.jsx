@@ -3,14 +3,14 @@ import useLessonsData from "./useLessonsData";
 import { useEffect, useState } from "react";
 
 function getCurrentLesson(encuentro, lessons) {
-  const lesson = lessons.find((lesson) => lesson.length[1] > encuentro);
+  const lesson = lessons.find((lesson) => lesson.length[1] >= encuentro);
   return lessons[lessons.indexOf(lesson)];
 }
 
 function getCurrentIntegrador(encuentro, lessons) {
   const regex = /^Integrador/;
   const integradorIndex = lessons.findIndex(
-    (lesson) => regex.test(lesson.name) && lesson.length[1] > encuentro
+    (lesson) => regex.test(lesson.name) && lesson.length[1] >= encuentro
   );
   return lessons[integradorIndex];
 }

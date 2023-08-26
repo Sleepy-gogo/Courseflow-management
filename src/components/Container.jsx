@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
+import { cn } from "../utilities/utils";
 
-function Container({ addons, children }) {
+function Container({ className, children }) {
   return (
     <div
-      className={`p-3 border-box mx-auto bg-slate-100 rounded-lg shadow-md mb-5 ${addons}`}
+      className={cn(
+        "p-3 border-box mx-auto bg-slate-100 rounded-lg shadow-md mb-5",
+        className
+      )}
     >
       {children}
     </div>
@@ -11,7 +15,7 @@ function Container({ addons, children }) {
 }
 
 Container.propTypes = {
-  addons: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 
