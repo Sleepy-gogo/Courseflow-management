@@ -3,7 +3,7 @@ import "react-circular-progressbar/dist/styles.css";
 import Container from "../Container";
 import Counter from "./Counter";
 import useStudentInfo from "../../hooks/useStudentInfo";
-import useEncuentros from "../../hooks/useEncuentro";
+import useEncuentros from "../../hooks/useEncuentros";
 
 function getRemainingEncounters(integradorLength, encuentro) {
   return integradorLength ? integradorLength[0] - encuentro : "...";

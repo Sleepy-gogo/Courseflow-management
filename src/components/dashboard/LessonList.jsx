@@ -1,6 +1,6 @@
 import Container from "../Container";
 import Lesson from "./Lesson";
-import useEncuentros from "../../hooks/useEncuentro";
+import useEncuentros from "../../hooks/useEncuentros";
 import useLessonsData from "../../hooks/useLessonsData";
 
 function getProgressData(encounter, lesson) {

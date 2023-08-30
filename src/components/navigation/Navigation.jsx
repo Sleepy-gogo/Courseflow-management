@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useUrlVerifier } from "../../hooks/useUrlVerifier";
 import Container from "../Container";
 import backgroundImage from "../../assets/egg_background.jpg";
-import eggIcon from "../../../public/egg_icon.svg";
+import eggIcon from "../../assets/egg_icon.svg";
 import userPlaceholderIcon from "../../assets/user_placeholder.jpeg";
 
 function Navigation() {
