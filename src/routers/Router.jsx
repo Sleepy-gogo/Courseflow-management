@@ -1,25 +1,42 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import { Dashboard, Login, Selector, Error, Navigation } from "../pages";
+import { AuthorizedUser, UnAuthorizedUser } from "./UserAuthRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigation />,
+    element: (
+      <AuthorizedUser>
+        <Navigation />
+      </AuthorizedUser>
+    ),
     errorElement: <Error />,
     children: [
       {
+        index: true,
+        element: <Navigate to="/dashboard" replace />,
+      },
+      {
         path: "dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "courses",
+        element: <Selector />,
       },
     ],
   },
   {
     path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/courses",
-    element: <Selector />,
+    element: (
+      <UnAuthorizedUser>
+        <Login />
+      </UnAuthorizedUser>
+    ),
   },
 ]);
 

@@ -1,12 +1,18 @@
-import { Outlet } from "react-router-dom";
-import { useUrlVerifier } from "../../hooks/useUrlVerifier";
+import { Outlet, useNavigate } from "react-router-dom";
 import Container from "../Container";
 import backgroundImage from "../../assets/egg_background.jpg";
 import eggIcon from "../../assets/egg_icon.svg";
-import userPlaceholderIcon from "../../assets/user_placeholder.jpeg";
+import useUserAuth from "../../hooks/useUserAuth";
 
 function Navigation() {
-  useUrlVerifier();
+  const { signOut, user } = useUserAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    signOut();
+    navigate("/login");
+  };
+
   return (
     <div
       className="bg-gradient-to-br from-cyan-400 to-blue-800 min-h-screen flex flex-col lg:h-screen"
@@ -23,8 +29,11 @@ function Navigation() {
             alt="Egg icon"
             className="h-full sm:h-fit sm:w-full aspect-square"
           />
-          <button className="rounded-full overflow-hidden bg-blue-100 aspect-square sm:w-full">
-            <img src={userPlaceholderIcon} alt="" />
+          <button
+            className="rounded-full overflow-hidden bg-blue-100 aspect-square sm:w-full"
+            onClick={handleSignOut}
+          >
+            <img src={user.avatar_url} alt="" />
           </button>
         </Container>
       </nav>
