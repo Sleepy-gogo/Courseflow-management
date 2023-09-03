@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from "react";
+import useStore from "./useStore";
 
-function useStoragedState(key, initialValue) {
-  const [state, setState] = useState(
-    JSON.parse(localStorage.getItem(key)) ?? initialValue
-  );
+function useStoragedState(key) {
+  const state = useStore((state) => state[key]);
 
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(state));
-  }, [key, state]);
+  }, [state, key]);
 
-  return [state, setState];
+  return state;
 }
 
 export default useStoragedState;

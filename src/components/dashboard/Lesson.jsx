@@ -1,5 +1,5 @@
 import ProgressBar from "@ramonak/react-progress-bar";
-import Container from "./Container";
+import Container from "../Container";
 import PropTypes from "prop-types";
 
 function Lesson({ lesson, progress }) {
@@ -9,7 +9,7 @@ function Lesson({ lesson, progress }) {
   const active = current ? "border-solid border-2 border-blue-400" : "";
 
   return (
-    <Container addons={`bg-white px-4 w-full ${active}`}>
+    <Container className={`bg-white px-4 w-full ${active}`}>
       <div className="flex items-center gap-4" id={current ? "current" : ""}>
         <input
           type="checkbox"

@@ -19,11 +19,11 @@ function Counter({ state, setState }) {
   };
 
   const decreaseEncuentros = () => {
-    setState((prevEncuentros) => validateNumber(prevEncuentros - 1));
+    setState(validateNumber(state - 1));
   };
 
   const increaseEncuentros = () => {
-    setState((prevEncuentros) => validateNumber(prevEncuentros + 1));
+    setState(validateNumber(state + 1));
   };
 
   return (

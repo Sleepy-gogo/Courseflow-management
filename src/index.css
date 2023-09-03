@@ -12,3 +12,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+@media (min-width: 640px) {
+  .mobile-only {
+    display:none
+  }
+}
