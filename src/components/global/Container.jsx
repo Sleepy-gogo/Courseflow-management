@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import { cn } from "../utilities/utils";
+import { cn } from "../../utilities/utils";
 
 function Container({ className, children }) {
   return (
@@ -13,10 +12,5 @@ function Container({ className, children }) {
     </div>
   );
 }
-
-Container.propTypes = {
-  className: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};
 
 export default Container;

@@ -1,4 +1,4 @@
-import Container from "../Container";
+import Container from "../global/Container";
 import Lesson from "./Lesson";
 import useEncuentros from "../../hooks/useEncuentros";
 import useLessonsData from "../../hooks/useLessonsData";
@@ -20,7 +20,7 @@ function LessonList() {
   const { lessons } = useLessonsData();
   return (
     <Container className="w-11/12 md:w-full h-[55vh] lg:h-full">
-      <h1 className="text-center font-bold text-lg sm:text-2xl mb-3">
+      <h1 className="mb-3 text-lg font-bold text-center sm:text-2xl">
         Lista de lecciones
       </h1>
       <div className="overflow-auto scroll-pt-7 scroll-smooth max-h-[calc(100%-3em)]">

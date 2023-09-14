@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PropTypes from "prop-types";
 
 function IconButton({ icon, onClick }) {
   return (
@@ -8,10 +7,5 @@ function IconButton({ icon, onClick }) {
     </button>
   );
 }
-
-IconButton.propTypes = {
-  icon: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired,
-};
 
 export default IconButton;

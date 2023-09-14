@@ -1,5 +1,4 @@
 import IconButton from "./IconButton";
-import PropTypes from "prop-types";
 import {
   faChevronRight,
   faChevronLeft,
@@ -39,10 +38,5 @@ function Counter({ state, setState }) {
     </div>
   );
 }
-
-Counter.propTypes = {
-  state: PropTypes.number.isRequired,
-  setState: PropTypes.func.isRequired,
-};
 
 export default Counter;

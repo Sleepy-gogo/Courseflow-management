@@ -1,6 +1,5 @@
 import ProgressBar from "@ramonak/react-progress-bar";
-import Container from "../Container";
-import PropTypes from "prop-types";
+import Container from "../global/Container";
 
 function Lesson({ lesson, progress }) {
   const { name, length } = lesson;
@@ -36,17 +35,5 @@ function Lesson({ lesson, progress }) {
     </Container>
   );
 }
-
-Lesson.propTypes = {
-  lesson: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    length: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
-  }).isRequired,
-  progress: PropTypes.shape({
-    completed: PropTypes.bool.isRequired,
-    percentage: PropTypes.number.isRequired,
-    current: PropTypes.bool.isRequired,
-  }).isRequired,
-};
 
 export default Lesson;
